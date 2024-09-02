@@ -205,17 +205,17 @@ for i in range(len(NotaBolo)):
   DesvPAD_Bolo = df2['Bolo'].std()
   if DesvPAD_Bolo == 0.0:
     DesvPAD_Bolo = 0.1
-  CalcNotas.NotaSalgado = NotaSalgado
-  CalcNotas.NotaRefri = NotaRefri
-  CalcNotas.NotaBolo = NotaBolo
+  st.write(NotaSalgado)
+  st.write(NotaRefri)
+  st.write(NotaBolo)
 
-  CalcNotas.DesvPAD_Salgado = DesvPAD_Salgado
-  CalcNotas.DesvPAD_Refri = DesvPAD_Refri
-  CalcNotas.DesvPAD_Bolo = DesvPAD_Bolo
-  #print("Desvio Padrão Salgado = ", DesvPAD_Salgado)
-  #print("Desvio Padrão Refri = ", DesvPAD_Refri)
-  #print("Desvio Padrão Bolo = ", DesvPAD_Bolo)
-  CalcNotas.IQT = round(NotaFinalSalgado/DesvPAD_Salgado + NotaFinalRefri/DesvPAD_Refri + NotaFinalBolo/DesvPAD_Bolo, 3)
-  CalcNotas.NotaFinalSalgado = round(NotaFinalSalgado/DesvPAD_Salgado, 3)
-  CalcNotas.NotaFinalRefri = round(NotaFinalRefri/DesvPAD_Refri, 3)
-  CalcNotas.NotaFinalBolo = round(NotaFinalBolo/DesvPAD_Bolo, 3)
+  st.write("Desvio Padrão Salgado = ", DesvPAD_Salgado)
+  st.writet("Desvio Padrão Refri = ", DesvPAD_Refri)
+  st.write("Desvio Padrão Bolo = ", DesvPAD_Bolo)
+  IQT = round(NotaFinalSalgado/DesvPAD_Salgado + NotaFinalRefri/DesvPAD_Refri + NotaFinalBolo/DesvPAD_Bolo, 3)
+  NotaFinalSalgado = round(NotaFinalSalgado/DesvPAD_Salgado, 3)
+  st.write(NotaFinalSalgado)
+  NotaFinalRefri = round(NotaFinalRefri/DesvPAD_Refri, 3)
+  st.write(NotaFinalRefri)
+  NotaFinalBolo = round(NotaFinalBolo/DesvPAD_Bolo, 3)
+  st.write(NotaFinalBolo)

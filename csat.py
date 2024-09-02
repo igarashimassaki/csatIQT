@@ -77,27 +77,27 @@ for i in range(n):
 df = pd.DataFrame({'Salgado': Salgado, 'Refri': Refi, 'Bolo': Bolo, 'Prazo': Prazo})
 st.write(df)
 
-st.write('NOTAS SALGADO: ')
+#st.write('NOTAS SALGADO: ')
 NotaSalgado = []
 SalgadoNota0 = df[df['Salgado'].str.contains('0')]
-st.write("Nota 0 = ", len(SalgadoNota0))
+#st.write("Nota 0 = ", len(SalgadoNota0))
 NotaSalgado.append(len(SalgadoNota0))
 SalgadoNota1 = df[df['Salgado'].str.contains('1')]
-st.write("Nota 1 = ", len(SalgadoNota1))
+#st.write("Nota 1 = ", len(SalgadoNota1))
 NotaSalgado.append(len(SalgadoNota1))
 SalgadoNota2 = df[df['Salgado'].str.contains('2')]
-st.write("Nota 2 = ", len(SalgadoNota2))
+#st.write("Nota 2 = ", len(SalgadoNota2))
 NotaSalgado.append(len(SalgadoNota2))
 SalgadoNota3 = df[df['Salgado'].str.contains('3')]
-st.write("Nota 3 = ", len(SalgadoNota3))
+#st.write("Nota 3 = ", len(SalgadoNota3))
 NotaSalgado.append(len(SalgadoNota3))
 SalgadoNota4 = df[df['Salgado'].str.contains('4')]
-st.write("Nota 4 = ", len(SalgadoNota4))
+#st.write("Nota 4 = ", len(SalgadoNota4))
 NotaSalgado.append(len(SalgadoNota4))
 SalgadoNota5 = df[df['Salgado'].str.contains('5')]
-st.write("Nota 5 = ", len(SalgadoNota5))
+#st.write("Nota 5 = ", len(SalgadoNota5))
 NotaSalgado.append(len(SalgadoNota5))
-st.write(NotaSalgado)
+#st.write(NotaSalgado)
 
 NotaFinalSalgado = 0
 for i in range(len(NotaSalgado)):
@@ -116,25 +116,25 @@ for i in range(len(NotaSalgado)):
 
 st.write("Nota Final Salgado = ", NotaFinalSalgado)
 
-st.write('\nNOTAS REFRI: ')
+#st.write('\nNOTAS REFRI: ')
 NotaRefri = []
 RefriNota0 = df[df['Refri'].str.contains('0')]
-st.write("Nota 0 = ", len(RefriNota0))
+#st.write("Nota 0 = ", len(RefriNota0))
 NotaRefri.append(len(RefriNota0))
 RefriNota1 = df[df['Refri'].str.contains('1')]
-st.write("Nota 1 = ", len(RefriNota1))
+#st.write("Nota 1 = ", len(RefriNota1))
 NotaRefri.append(len(RefriNota1))
 RefriNota2 = df[df['Refri'].str.contains('2')]
-st.write("Nota 2 = ", len(RefriNota2))
+#st.write("Nota 2 = ", len(RefriNota2))
 NotaRefri.append(len(RefriNota2))
 RefriNota3 = df[df['Refri'].str.contains('3')]
-st.write("Nota 3 = ", len(RefriNota3))
+#st.write("Nota 3 = ", len(RefriNota3))
 NotaRefri.append(len(RefriNota3))
 RefriNota4 = df[df['Refri'].str.contains('4')]
-st.write("Nota 4 = ", len(RefriNota4))
+#st.write("Nota 4 = ", len(RefriNota4))
 NotaRefri.append(len(RefriNota4))
 RefriNota5 = df[df['Refri'].str.contains('5')]
-st.write("Nota 5 = ", len(RefriNota5))
+#st.write("Nota 5 = ", len(RefriNota5))
 NotaRefri.append(len(RefriNota5))
 
 st.write(NotaRefri)
@@ -156,25 +156,25 @@ for i in range(len(NotaRefri)):
 
 st.write("Nota Final Refri = ", NotaFinalRefri)
 
-st.write('\nNOTAS BOLO: ')
+#st.write('\nNOTAS BOLO: ')
 NotaBolo = []
 BoloNota0 = df[df['Bolo'].str.contains('0')]
-st.write("Nota 0 = ", len(BoloNota0))
+#st.write("Nota 0 = ", len(BoloNota0))
 NotaBolo.append(len(BoloNota0))
 BoloNota1 = df[df['Bolo'].str.contains('1')]
-st.write("Nota 1 = ", len(BoloNota1))
+#st.write("Nota 1 = ", len(BoloNota1))
 NotaBolo.append(len(BoloNota1))
 BoloNota2 = df[df['Bolo'].str.contains('2')]
-st.write("Nota 2 = ", len(BoloNota2))
+#st.write("Nota 2 = ", len(BoloNota2))
 NotaBolo.append(len(BoloNota2))
 BoloNota3 = df[df['Bolo'].str.contains('3')]
-st.write("Nota 3 = ", len(BoloNota3))
+#st.write("Nota 3 = ", len(BoloNota3))
 NotaBolo.append(len(BoloNota3))
 BoloNota4 = df[df['Bolo'].str.contains('4')]
-st.write("Nota 4 = ", len(BoloNota4))
+#st.write("Nota 4 = ", len(BoloNota4))
 NotaBolo.append(len(BoloNota4))
 BoloNota5 = df[df['Bolo'].str.contains('5')]
-st.write("Nota 5 = ", len(BoloNota5))
+#st.write("Nota 5 = ", len(BoloNota5))
 NotaBolo.append(len(BoloNota5))
 
 st.write(NotaBolo)
@@ -194,4 +194,4 @@ for i in range(len(NotaBolo)):
   elif i == 5:
     NotaFinalBolo += (5*NotaBolo[5])
 
-st.write("Nota Final BOlo = ", NotaFinalBolo)
+st.write("Nota Final Bolo = ", NotaFinalBolo)

@@ -81,7 +81,7 @@ with col1:
 with col2:
     st.write('')
 with col3:
-resp = st_text_rater("Gostou?")
+    resp = st_text_rater("Gostou?")
 #st.write(f"Resposta: {resp}")
 if resp == "liked":
     LIKED = 1

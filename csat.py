@@ -210,7 +210,7 @@ for i in range(len(NotaBolo)):
   st.write(NotaBolo)
 
   st.write("Desvio Padrão Salgado = ", DesvPAD_Salgado)
-  st.writet("Desvio Padrão Refri = ", DesvPAD_Refri)
+  st.write("Desvio Padrão Refri = ", DesvPAD_Refri)
   st.write("Desvio Padrão Bolo = ", DesvPAD_Bolo)
   IQT = round(NotaFinalSalgado/DesvPAD_Salgado + NotaFinalRefri/DesvPAD_Refri + NotaFinalBolo/DesvPAD_Bolo, 3)
   NotaFinalSalgado = round(NotaFinalSalgado/DesvPAD_Salgado, 3)

@@ -1,0 +1,8 @@
+streamlit==1.38.0
+pandas
+plotly
+altair 
+numpy
+matplotlib
+requests
+wordcloud

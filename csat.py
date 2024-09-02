@@ -41,5 +41,5 @@ st.title("Índice de Qualidade da Taioba - IQT")
 urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"
 rD = requests.get(urlCSV)
 dataD = rD.content
-db = pd.read_csv(BytesIO(dataD))  
+db = pd.read_csv(BytesIO(dataD), index_col=0)
 st.dataframe(db) 

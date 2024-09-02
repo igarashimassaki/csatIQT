@@ -216,8 +216,7 @@ for i in range(len(NotaBolo)):
   st.write(NotaSalgado)
   st.write(NotaRefri)
   st.write(NotaBolo)
-  CSAT = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
-  st.write(CSAT)
+  
   st.write("Desvio Padrão Salgado = ", DesvPAD_Salgado)
   st.write("Desvio Padrão Refri = ", DesvPAD_Refri)
   st.write("Desvio Padrão Bolo = ", DesvPAD_Bolo)
@@ -228,3 +227,6 @@ for i in range(len(NotaBolo)):
   st.write(NotaFinalRefri)
   NotaFinalBolo = round(NotaFinalBolo/DesvPAD_Bolo, 3)
   st.write(NotaFinalBolo)
+  CSAT = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
+  st.write("CSAT = ")
+  st.write(CSAT)

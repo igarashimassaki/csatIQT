@@ -75,7 +75,18 @@ for i in range(n):
   Prazo.append(NotaPrazo(db.iloc[i,4]))
 
 df = pd.DataFrame({'Salgado': Salgado, 'Refri': Refi, 'Bolo': Bolo, 'Prazo': Prazo})
+df2 = df.astype(int)
 st.write(df)
+
+DesvPAD_Salgado = df2['Salgado'].std()
+if DesvPAD_Salgado == 0.0:
+  DesvPAD_Salgado = 0.1
+DesvPAD_Refri = df2['Refri'].std()
+if DesvPAD_Refri == 0.0:
+  DesvPAD_Refri = 0.1
+DesvPAD_Bolo = df2['Bolo'].std()
+if DesvPAD_Bolo == 0.0:
+  DesvPAD_Bolo = 0.1
 
 #st.write('NOTAS SALGADO: ')
 NotaSalgado = []

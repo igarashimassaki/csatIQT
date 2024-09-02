@@ -15,6 +15,14 @@ resp = None
 LIKED = 0
 DISLIKED = 0
 
+def CalculaCSat(Notas1, Notas2, Notas3):
+  QTDrespostas = sum(Notas1) + sum(Notas2) + sum(Notas3)
+  Ndetratores = Notas1[1] + Notas2[1] + Notas3[1]
+  Nsatisfeitos = Notas1[4] + Notas2[4] + Notas3[4] + Notas1[5] + Notas2[5] + Notas3[5]
+  PorcentDETRATORES = (Ndetratores/QTDrespostas)*100
+  CSatpropotores = (Nsatisfeitos/QTDrespostas)*100
+  return CSatpropotores
+
 def AtribuiNota(Csat):
   if Csat == 'Gosto Horrível':
     return '1'
@@ -208,7 +216,8 @@ for i in range(len(NotaBolo)):
   st.write(NotaSalgado)
   st.write(NotaRefri)
   st.write(NotaBolo)
-
+  CSAT = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
+  st.write(CSAT)
   st.write("Desvio Padrão Salgado = ", DesvPAD_Salgado)
   st.write("Desvio Padrão Refri = ", DesvPAD_Refri)
   st.write("Desvio Padrão Bolo = ", DesvPAD_Bolo)

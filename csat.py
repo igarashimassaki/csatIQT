@@ -84,29 +84,23 @@ for i in range(n):
 
 df = pd.DataFrame({'Salgado': Salgado, 'Refri': Refi, 'Bolo': Bolo, 'Prazo': Prazo})
 df2 = df.astype(int)
-st.write(df)
+#st.write(df)
 
 #print('NOTAS SALGADO: ')
 NotaSalgado = []
 SalgadoNota0 = df[df['Salgado'].str.contains('0')]
-#print("Nota 0 = ", len(SalgadoNota0))
 NotaSalgado.append(len(SalgadoNota0))
 SalgadoNota1 = df[df['Salgado'].str.contains('1')]
-#print("Nota 1 = ", len(SalgadoNota1))
 NotaSalgado.append(len(SalgadoNota1))
 SalgadoNota2 = df[df['Salgado'].str.contains('2')]
-#print("Nota 2 = ", len(SalgadoNota2))
 NotaSalgado.append(len(SalgadoNota2))
 SalgadoNota3 = df[df['Salgado'].str.contains('3')]
-#print("Nota 3 = ", len(SalgadoNota3))
 NotaSalgado.append(len(SalgadoNota3))
 SalgadoNota4 = df[df['Salgado'].str.contains('4')]
-#print("Nota 4 = ", len(SalgadoNota4))
 NotaSalgado.append(len(SalgadoNota4))
 SalgadoNota5 = df[df['Salgado'].str.contains('5')]
-#print("Nota 5 = ", len(SalgadoNota5))
 NotaSalgado.append(len(SalgadoNota5))
-st.write(NotaSalgado)
+#st.write(NotaSalgado)
 
 NotaFinalSalgado = 0
 for i in range(len(NotaSalgado)):
@@ -123,29 +117,21 @@ for i in range(len(NotaSalgado)):
   elif i == 5:
     NotaFinalSalgado += (5*NotaSalgado[5])
 
-#print("Nota Final Salgado = ", NotaFinalSalgado)
 #print('\nNOTAS REFRI: ')
 NotaRefri = []
 RefriNota0 = df[df['Refri'].str.contains('0')]
-#print("Nota 0 = ", len(RefriNota0))
 NotaRefri.append(len(RefriNota0))
 RefriNota1 = df[df['Refri'].str.contains('1')]
-#print("Nota 1 = ", len(RefriNota1))
 NotaRefri.append(len(RefriNota1))
 RefriNota2 = df[df['Refri'].str.contains('2')]
-#print("Nota 2 = ", len(RefriNota2))
 NotaRefri.append(len(RefriNota2))
 RefriNota3 = df[df['Refri'].str.contains('3')]
-#print("Nota 3 = ", len(RefriNota3))
 NotaRefri.append(len(RefriNota3))
 RefriNota4 = df[df['Refri'].str.contains('4')]
-#print("Nota 4 = ", len(RefriNota4))
 NotaRefri.append(len(RefriNota4))
 RefriNota5 = df[df['Refri'].str.contains('5')]
-#print("Nota 5 = ", len(RefriNota5))
 NotaRefri.append(len(RefriNota5))
 
-st.write(NotaRefri)
 NotaFinalRefri = 0
 for i in range(len(NotaRefri)):
   if i == 0:
@@ -161,29 +147,20 @@ for i in range(len(NotaRefri)):
   elif i == 5:
     NotaFinalRefri += (5*NotaRefri[5])
 
-#print("Nota Final Refri = ", NotaFinalRefri)
 #print('\nNOTAS BOLO: ')
 NotaBolo = []
 BoloNota0 = df[df['Bolo'].str.contains('0')]
-#print("Nota 0 = ", len(BoloNota0))
 NotaBolo.append(len(BoloNota0))
 BoloNota1 = df[df['Bolo'].str.contains('1')]
-#print("Nota 1 = ", len(BoloNota1))
 NotaBolo.append(len(BoloNota1))
 BoloNota2 = df[df['Bolo'].str.contains('2')]
-#print("Nota 2 = ", len(BoloNota2))
 NotaBolo.append(len(BoloNota2))
 BoloNota3 = df[df['Bolo'].str.contains('3')]
-#print("Nota 3 = ", len(BoloNota3))
 NotaBolo.append(len(BoloNota3))
 BoloNota4 = df[df['Bolo'].str.contains('4')]
-#print("Nota 4 = ", len(BoloNota4))
 NotaBolo.append(len(BoloNota4))
 BoloNota5 = df[df['Bolo'].str.contains('5')]
-#print("Nota 5 = ", len(BoloNota5))
 NotaBolo.append(len(BoloNota5))
-
-st.write(NotaBolo)
 
 NotaFinalBolo = 0
 for i in range(len(NotaBolo)):
@@ -199,8 +176,6 @@ for i in range(len(NotaBolo)):
     NotaFinalBolo += (4*NotaBolo[4])
   elif i == 5:
     NotaFinalBolo += (5*NotaBolo[5])
-
-  #print("Nota Final BOlo = ", NotaFinalBolo)
 
   df2 = df.astype(int)
 

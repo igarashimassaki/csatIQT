@@ -100,7 +100,6 @@ SalgadoNota4 = df[df['Salgado'].str.contains('4')]
 NotaSalgado.append(len(SalgadoNota4))
 SalgadoNota5 = df[df['Salgado'].str.contains('5')]
 NotaSalgado.append(len(SalgadoNota5))
-#st.write(NotaSalgado)
 
 NotaFinalSalgado = 0
 for i in range(len(NotaSalgado)):
@@ -188,20 +187,11 @@ for i in range(len(NotaBolo)):
   DesvPAD_Bolo = df2['Bolo'].std()
   if DesvPAD_Bolo == 0.0:
     DesvPAD_Bolo = 0.1
-  st.write(NotaSalgado)
-  st.write(NotaRefri)
-  st.write(NotaBolo)
   
-  st.write("Desvio Padrão Salgado = ", DesvPAD_Salgado)
-  st.write("Desvio Padrão Refri = ", DesvPAD_Refri)
-  st.write("Desvio Padrão Bolo = ", DesvPAD_Bolo)
   IQT = round(NotaFinalSalgado/DesvPAD_Salgado + NotaFinalRefri/DesvPAD_Refri + NotaFinalBolo/DesvPAD_Bolo, 3)
   NotaFinalSalgado = round(NotaFinalSalgado/DesvPAD_Salgado, 3)
-  st.write(NotaFinalSalgado)
   NotaFinalRefri = round(NotaFinalRefri/DesvPAD_Refri, 3)
-  st.write(NotaFinalRefri)
   NotaFinalBolo = round(NotaFinalBolo/DesvPAD_Bolo, 3)
-  st.write(NotaFinalBolo)
   CSAT = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
   st.write("CSAT = ")
   st.write(CSAT)

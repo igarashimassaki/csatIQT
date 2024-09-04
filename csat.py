@@ -145,6 +145,7 @@ def main():
   with ColunasA[0]:
 	TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 26px;">IQT</p>'    
 	st.markdown(TituloIQT, unsafe_allow_html=True)
+	mystyle0 =   '''<style> p{text-align:center;}</style>'''
 	st.markdown(mystyle0, unsafe_allow_html=True) 
   with ColunasA[1]:
   	st.title(IQT)

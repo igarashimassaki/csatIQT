@@ -150,6 +150,8 @@ def main():
     mystyle0 =   '''<style> p{text-align:center;}</style>'''
     st.markdown(mystyle0, unsafe_allow_html=True) 
     st.title(IQT)
+    ValorIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">{IQT}</p>'    
+    st.markdown(ValorIQT, unsafe_allow_html=True)
   with ColunasA[2]:
     st.write("")    
 	  

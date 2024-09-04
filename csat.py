@@ -144,26 +144,26 @@ def main():
   image = Image.open('FUNDO.png')  
   st.image(image, width=680, caption='')
   with tab1:
-	ColunasA = st.columns(3) 
-	with ColunasA[0]:
-		with st.container(height=None, border=True):
-			st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
-	with ColunasA[1]:
-		with st.container(height=None, border=True):
-			st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
-	with ColunasA[2]:
-		with st.container(height=None, border=True):
-			st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
-	
-	ColunasB = st.columns(3)  
-	with ColunasB[0]:
-		st.write("")
-	with ColunasB[1]:
-		st.write("TOTAL de respondentes = ", QTDresp)    
-	with ColunasB[2]:
-		st.write("") 
-	with tab2:   
-		st.title("Auditoria dos Dados")
+    ColunasA = st.columns(3) 
+    with ColunasA[0]:
+      with st.container(height=None, border=True):
+        st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
+    with ColunasA[1]:
+      with st.container(height=None, border=True):
+        st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
+    with ColunasA[2]:
+      with st.container(height=None, border=True):
+        st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
+    
+    ColunasB = st.columns(3)  
+    with ColunasB[0]:
+      st.write("")
+    with ColunasB[1]:
+      st.write("TOTAL de respondentes = ", QTDresp)    
+    with ColunasB[2]:
+      st.write("") 
+  with tab2:   
+	  st.title("Auditoria dos Dados")
   
 if __name__ == '__main__':
 	main()

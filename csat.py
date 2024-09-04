@@ -141,9 +141,9 @@ def main():
 
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
-  with tab1:	
-	image = Image.open('FUNDO.png')  
-	st.image(image, width=680, caption='')
+  image = Image.open('FUNDO.png')  
+  st.image(image, width=680, caption='')
+  with tab1:
 	ColunasA = st.columns(3) 
 	with ColunasA[0]:
 		with st.container(height=None, border=True):

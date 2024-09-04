@@ -142,28 +142,28 @@ def main():
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
   with tab1:	
-	  image = Image.open('FUNDO.png')  
-          st.image(image, width=680, caption='')
-	  ColunasA = st.columns(3) 
-	  with ColunasA[0]:
-	    with st.container(height=None, border=True):
-	      st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
-	  with ColunasA[1]:
-	    with st.container(height=None, border=True):
-	      st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
-	  with ColunasA[2]:
-	    with st.container(height=None, border=True):
-	      st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
+    image = Image.open('FUNDO.png')  
+    st.image(image, width=680, caption='')
+    ColunasA = st.columns(3) 
+    with ColunasA[0]:
+      with st.container(height=None, border=True):
+	st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
+    with ColunasA[1]:
+      with st.container(height=None, border=True):
+	st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
+    with ColunasA[2]:
+      with st.container(height=None, border=True):
+        st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
 		    
-	  ColunasB = st.columns(3) 
-	  with ColunasB[0]:
-	    st.write("")
-	  with ColunasB[1]:
-	    st.write("TOTAL de respondentes = ", QTDresp)    
-	  with ColunasB[2]:
-	    st.write("") 
-  with tab2:  
-	  st.title("Auditoria dos Dados")
+    ColunasB = st.columns(3)  
+    with ColunasB[0]:
+      st.write("")
+    with ColunasB[1]:
+      st.write("TOTAL de respondentes = ", QTDresp)    
+    with ColunasB[2]:
+      st.write("") 
+  with tab2:   
+    st.title("Auditoria dos Dados")
   
 if __name__ == '__main__':
 	main()

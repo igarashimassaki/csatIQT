@@ -164,6 +164,7 @@ def main():
     dataD = rD2.content
     dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)
     st.write(dbTab2)
+    st.write("TOTAL de respondentes = ", len(dbTab2))
   
 if __name__ == '__main__':
 	main()

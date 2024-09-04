@@ -39,8 +39,9 @@ def CalculaCSat(Notas1, Notas2, Notas3):
   Nsatisfeitos = Notas1[4] + Notas2[4] + Notas3[4] + Notas1[5] + Notas2[5] + Notas3[5]
   #print("Nsatisfeitos = ", Nsatisfeitos)
   PorcentDETRATORES = (Ndetratores/QTDrespostas)*100
-  CSatpropotores = round((Nsatisfeitos/QTDrespostas)*100, 3)
-  return CSatpropotores, Nsatisfeitos, Ndetratores, QTDrespostas
+  PorcentSATISFEITOS = round((Nsatisfeitos/QTDrespostas)*100, 3)
+  CSATcalc = PorcentSATISFEITOS - PorcentDETRATORES
+  return CSATcalc, Nsatisfeitos, Ndetratores, QTDrespostas
 
 def IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"):
   rD = requests.get(urlCSV)

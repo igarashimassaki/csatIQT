@@ -9,7 +9,7 @@ import requests
 from io import BytesIO
 import urllib3
 from urllib3 import request
-#from PIL import Image # Lib para carregar imagem no Streamlit
+from PIL import Image # Lib para carregar imagem no Streamlit
 
 def AtribuiNota(Csat):
   if Csat == 'Gosto Horrível':
@@ -138,6 +138,9 @@ def main():
               page_icon=icone)
   
   st.title("Índice de Qualidade da Taioba - IQT")
+  image = Image.open('FUNDO.png')    
+  st.image(image, width=600)
+  st.image(ArqPNG, width=600, caption='Label da Figura')
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   st.write("IQT = ", IQT)
   st.write("Nº de satisteitos = ", Nsat)

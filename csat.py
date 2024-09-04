@@ -40,7 +40,7 @@ def CalculaCSat(Notas1, Notas2, Notas3):
   #print("Nsatisfeitos = ", Nsatisfeitos)
   PorcentDETRATORES = (Ndetratores/QTDrespostas)*100
   PorcentSATISFEITOS = round((Nsatisfeitos/QTDrespostas)*100, 3)
-  CSATcalc = PorcentSATISFEITOS - PorcentDETRATORES
+  CSATcalc = round(PorcentSATISFEITOS - PorcentDETRATORES, 3)
   return CSATcalc, Nsatisfeitos, Ndetratores, QTDrespostas
 
 def IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"):

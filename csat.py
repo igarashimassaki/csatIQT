@@ -139,11 +139,11 @@ def main():
   
   st.title("Índice de Qualidade da Taioba - IQT")
   image = Image.open('FUNDO.png')  
-  st.image(image, width=680, caption='Label da Figura')
+  st.image(image, width=680, caption='')
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   ColunasA = st.columns(2) 
   with ColunasA[0]:
-    TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 26px;">IQT</p>'    
+    TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">IQT</p>'    
     st.markdown(TituloIQT, unsafe_allow_html=True)
     mystyle0 =   '''<style> p{text-align:center;}</style>'''
     st.markdown(mystyle0, unsafe_allow_html=True) 

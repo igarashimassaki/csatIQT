@@ -143,7 +143,6 @@ def main():
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
   image = Image.open('FUNDO.png')   
   with tab1:
-    st.image(image, width=680, caption='')
     ColunasA = st.columns(3) 
     with ColunasA[0]:
       with st.container(height=None, border=True):
@@ -162,8 +161,9 @@ def main():
       st.write("TOTAL de respondentes = ", QTDresp)    
     with ColunasB[2]:
       st.write("") 
+    st.image(image, width=680, caption='')
   with tab2:   
-	  st.title("Auditoria dos Dados")
+    st.title("Auditoria dos Dados")
   
 if __name__ == '__main__':
 	main()

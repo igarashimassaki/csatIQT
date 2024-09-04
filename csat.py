@@ -129,7 +129,7 @@ def main():
           '''
                   
   icone = "©️"
-  st.set_page_config(layout="wide", 
+  st.set_page_config(layout="centered", 
   page_title="IQT SENAI R. MANGE",
   initial_sidebar_state = "auto",
   menu_items={'Get Help': (ajuda),

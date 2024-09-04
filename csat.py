@@ -154,7 +154,7 @@ def main():
     with ColunasA[2]:
       with st.container(height=None, border=True):
         st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")      
-    st.title("")
+    st.write("")
     st.image(image, width=680, caption='')
   with tab2:   
     st.title("Auditoria dos Dados")

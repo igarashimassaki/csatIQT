@@ -148,13 +148,17 @@ def main():
   with ColunasA[1]:
     with st.container(height=None, border=True):
       st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
-      st.write("QTD TOTAL de respondentes = ", QTDresp)    
   with ColunasA[2]:
     with st.container(height=None, border=True):
       st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
-	  
-  st.write("Nº de satisteitos = ", Nsat)
-  st.write("Nº de insatisfeitos (Detratores) = ", Ndet)
+	    
+  ColunasB = st.columns(3) 
+  with ColunasB[0]:
+    st.write("")
+  with ColunasB[1]:
+    st.write("TOTAL de respondentes = ", QTDresp)    
+  with ColunasB[2]:
+    st.write("") 
   
 if __name__ == '__main__':
 	main()

@@ -153,15 +153,8 @@ def main():
         st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
     with ColunasA[2]:
       with st.container(height=None, border=True):
-        st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
-    
-    ColunasB = st.columns(3)  
-    with ColunasB[0]:
-      st.write("")
-    with ColunasB[1]:
-      st.write("TOTAL de respondentes = ", QTDresp)    
-    with ColunasB[2]:
-      st.write("") 
+        st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")      
+    st.title("")
     st.image(image, width=680, caption='')
   with tab2:   
     st.title("Auditoria dos Dados")

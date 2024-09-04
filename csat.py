@@ -141,7 +141,14 @@ def main():
   image = Image.open('FUNDO.png')  
   st.image(image, width=680, caption='Label da Figura')
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
-  st.write("IQT = ", IQT)
+  ColunasA = st.columns(2) 
+  with ColunasA[0]:
+	TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 26px;">IQT</p>'    
+	st.markdown(TituloIQT, unsafe_allow_html=True)
+	st.markdown(mystyle0, unsafe_allow_html=True) 
+  with ColunasA[1]:
+  	st.title(IQT)
+	  
   st.write("Nº de satisteitos = ", Nsat)
   st.write("Nº de insatisfeitos (Detratores) = ", Ndet)
   st.write("QTD TOTAL de respondentes = ", QTDresp)

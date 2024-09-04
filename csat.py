@@ -143,7 +143,8 @@ def main():
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   ColunasA = st.columns(3) 
   with ColunasA[0]:
-    st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
+    with st.container(height=None, border=True):
+      st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
   with ColunasA[1]:
     #TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">IQT</p>'    
     #st.markdown(TituloIQT, unsafe_allow_html=True)
@@ -153,7 +154,8 @@ def main():
     with st.container(height=None, border=True):
       st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
   with ColunasA[2]:
-    st.write("")    
+    with st.container(height=None, border=True):
+      st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
 	  
   st.write("Nº de satisteitos = ", Nsat)
   st.write("Nº de insatisfeitos (Detratores) = ", Ndet)

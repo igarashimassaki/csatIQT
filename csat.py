@@ -145,13 +145,13 @@ def main():
   with ColunasA[0]:
     st.write("")
   with ColunasA[1]:
-    TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">IQT</p>'    
-    st.markdown(TituloIQT, unsafe_allow_html=True)
-    mystyle0 =   '''<style> p{text-align:center;}</style>'''
-    st.markdown(mystyle0, unsafe_allow_html=True) 
-    st.title(IQT)
-    ValorIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">{IQT}</p>'    
-    st.markdown(ValorIQT, unsafe_allow_html=True)
+    #TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">IQT</p>'    
+    #st.markdown(TituloIQT, unsafe_allow_html=True)
+    #mystyle0 =   '''<style> p{text-align:center;}</style>'''
+    #st.markdown(mystyle0, unsafe_allow_html=True) 
+    #st.title(IQT)
+    with st.container(height=None, border=True):
+      st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
   with ColunasA[2]:
     st.write("")    
 	  

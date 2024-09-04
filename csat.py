@@ -139,7 +139,7 @@ def main():
   
   st.title("Índice de Qualidade da Taioba - IQT")
   image = Image.open('FUNDO.png')  
-  st.image(image, width=640, caption='Label da Figura')
+  st.image(image, width=680, caption='Label da Figura')
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
   st.write("IQT = ", IQT)
   st.write("Nº de satisteitos = ", Nsat)

@@ -146,20 +146,15 @@ def main():
     with st.container(height=None, border=True):
       st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
   with ColunasA[1]:
-    #TituloIQT = '<p style="font-weight: bolder; color:#f55050; font-size: 42px;">IQT</p>'    
-    #st.markdown(TituloIQT, unsafe_allow_html=True)
-    #mystyle0 =   '''<style> p{text-align:center;}</style>'''
-    #st.markdown(mystyle0, unsafe_allow_html=True) 
-    #st.title(IQT)
     with st.container(height=None, border=True):
       st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
+      st.write("QTD TOTAL de respondentes = ", QTDresp)    
   with ColunasA[2]:
     with st.container(height=None, border=True):
       st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")  
 	  
   st.write("Nº de satisteitos = ", Nsat)
   st.write("Nº de insatisfeitos (Detratores) = ", Ndet)
-  st.write("QTD TOTAL de respondentes = ", QTDresp)
-
+  
 if __name__ == '__main__':
 	main()

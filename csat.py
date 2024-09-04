@@ -137,9 +137,9 @@ def main():
               'About': (sobre)},
               page_icon=icone)
   
-  st.title("Índice de Qualidade da Taioba - IQT")
-  st.write("TOTAL de respondentes = ", QTDresp)   
+  st.title("Índice de Qualidade da Taioba - IQT")     
   IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
+  st.write("TOTAL de respondentes = ", QTDresp)
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
   image = Image.open('FUNDO.png')   
   with tab1:

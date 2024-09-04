@@ -159,7 +159,7 @@ def main():
     st.image(image, width=680, caption='')
   with tab2:   
     st.title("Auditoria dos Dados")
-    url = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"):
+    url = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"
     rD2 = requests.get(url)
     dataD = rD2.content
     dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)

@@ -110,7 +110,7 @@ def IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu
 
   CSAT, Nsat, Ndet, QTDresp = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
 
-  return CSAT, Nsat, Ndet, QTDresp, db2
+  return CSAT, Nsat, Ndet, QTDresp, db2, df
 
 def main():
   resp = None
@@ -140,7 +140,7 @@ def main():
               page_icon=icone)
   
   st.title("Índice de Qualidade da Taioba - IQT")     
-  IQT, Nsat, Ndet, QTDresp, db2 = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
+  IQT, Nsat, Ndet, QTDresp, db2, dfCSAT = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
 
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
   image = Image.open('FUNDO.png')   
@@ -172,7 +172,8 @@ def main():
     #dbTab2['N4'].fillna('', inplace=True)
     #db2 = dbTab2[['N1', 'N2', 'N3', 'N4']]  
     st.write(db2)
-    st.write("TOTAL de respondentes = ", len(db2))
+    st.write("TOTAL de respondentes = ", len(db2)) 
+    st.write(dfCSAT)
   
 if __name__ == '__main__':
 	main()

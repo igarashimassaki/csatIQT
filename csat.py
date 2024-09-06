@@ -162,8 +162,10 @@ def main():
     st.title("Auditoria dos Dados") 
     ColunasB = st.columns(2) 
     with ColunasB[0]:
+      st.subheader('Votos Registrados')
       st.write(db2)
     with ColunasB[1]:
+      st.subheader('Índice CSat')
       st.write(dfCSAT)
     st.write("TOTAL de respondentes = ", len(db2)) 
     

@@ -159,21 +159,14 @@ def main():
     st.write("")
     st.image(image, width=680, caption='')
   with tab2:   
-    st.title("Auditoria dos Dados")
-    #url = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"
-    #rD2 = requests.get(url)
-    #dataD = rD2.content
-    #dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)
-    #dbTab2.columns = ['ID', 'N1', 'N2', 'N3', 'N4']
-    #dbTab2['ID'].fillna('', inplace=True)
-    #dbTab2['N1'].fillna('', inplace=True)
-    #dbTab2['N2'].fillna('', inplace=True)
-    #dbTab2['N3'].fillna('', inplace=True)
-    #dbTab2['N4'].fillna('', inplace=True)
-    #db2 = dbTab2[['N1', 'N2', 'N3', 'N4']]  
-    st.write(db2)
+    st.title("Auditoria dos Dados") 
+    ColunasB = st.columns(2) 
+    with ColunasB[0]:
+      st.write(db2)
+    with ColunasB[1]:
+      st.write(dfCSAT)
     st.write("TOTAL de respondentes = ", len(db2)) 
-    st.write(dfCSAT)
+    
   
 if __name__ == '__main__':
 	main()

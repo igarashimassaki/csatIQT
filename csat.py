@@ -148,13 +148,13 @@ def main():
     ColunasA = st.columns(3) 
     with ColunasA[0]:
       with st.container(height=None, border=True):
-        st.metric("Nª Satisfeitos", Nsat, "Satisfeitos")
+        st.metric("QTD de Satisfação", Nsat, "Satisfeitos")
     with ColunasA[1]:
       with st.container(height=None, border=True):
         st.metric("IQT", IQT, "Índice de Qualidade da Taioba")
     with ColunasA[2]:
       with st.container(height=None, border=True):
-        st.metric("Nª Insatisfeitos", Ndet, "-Insatisfeitos")      
+        st.metric("QTD de Insatisfação", Ndet, "-Insatisfeitos")      
     st.write("")
     st.image(image, width=680, caption='')
   with tab2:   

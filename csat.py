@@ -159,7 +159,7 @@ def main():
     st.write("")
     st.image(image, width=680, caption='')
   with tab2:   
-    st.title("Auditoria dos Dados") 
+    st.title("Painel de Auditoria dos Dados") 
     ColunasB = st.columns(2) 
     with ColunasB[0]:
       st.subheader('Votos Registrados')

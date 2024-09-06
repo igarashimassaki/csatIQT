@@ -53,6 +53,7 @@ def IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu
   db['N2'].fillna('', inplace=True)
   db['N3'].fillna('', inplace=True)
   db['N4'].fillna('', inplace=True)
+  db2 = db[['N1', 'N2', 'N3', 'N4']]
   n = len(db)
   Salgado = []
   Refi = []
@@ -109,7 +110,7 @@ def IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu
 
   CSAT, Nsat, Ndet, QTDresp = CalculaCSat(NotaSalgado, NotaRefri, NotaBolo)
 
-  return CSAT, Nsat, Ndet, QTDresp
+  return CSAT, Nsat, Ndet, QTDresp, db2
 
 def main():
   resp = None
@@ -139,7 +140,7 @@ def main():
               page_icon=icone)
   
   st.title("Índice de Qualidade da Taioba - IQT")     
-  IQT, Nsat, Ndet, QTDresp = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
+  IQT, Nsat, Ndet, QTDresp, db2 = IQT_CSat_Taioba(urlCSV = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv")
 
   tab1, tab2 = st.tabs(["Indicador", "Auditar Dados"])
   image = Image.open('FUNDO.png')   
@@ -159,17 +160,17 @@ def main():
     st.image(image, width=680, caption='')
   with tab2:   
     st.title("Auditoria dos Dados")
-    url = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"
-    rD2 = requests.get(url)
-    dataD = rD2.content
-    dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)
-    dbTab2.columns = ['ID', 'N1', 'N2', 'N3', 'N4']
-    dbTab2['ID'].fillna('', inplace=True)
-    dbTab2['N1'].fillna('', inplace=True)
-    dbTab2['N2'].fillna('', inplace=True)
-    dbTab2['N3'].fillna('', inplace=True)
-    dbTab2['N4'].fillna('', inplace=True)
-    db2 = dbTab2[['N1', 'N2', 'N3', 'N4']]  
+    #url = "https://docs.google.com/spreadsheets/d/1qjfkA6CiKu47ys1B7NhV1FYx4VlW67ZEHwKg9GRvQPw/pub?gid=1171079915&single=true&output=csv"
+    #rD2 = requests.get(url)
+    #dataD = rD2.content
+    #dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)
+    #dbTab2.columns = ['ID', 'N1', 'N2', 'N3', 'N4']
+    #dbTab2['ID'].fillna('', inplace=True)
+    #dbTab2['N1'].fillna('', inplace=True)
+    #dbTab2['N2'].fillna('', inplace=True)
+    #dbTab2['N3'].fillna('', inplace=True)
+    #dbTab2['N4'].fillna('', inplace=True)
+    #db2 = dbTab2[['N1', 'N2', 'N3', 'N4']]  
     st.write(db2)
     st.write("TOTAL de respondentes = ", len(db2))
   

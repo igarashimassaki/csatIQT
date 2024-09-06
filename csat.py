@@ -165,7 +165,7 @@ def main():
       st.subheader('Votos Registrados')
       st.write(db2)
     with ColunasB[1]:
-      st.subheader('Índice CSat')
+      st.subheader('Índice CSat dos Votos')
       st.write(dfCSAT)
     st.write("TOTAL de respondentes = ", len(db2)) 
     

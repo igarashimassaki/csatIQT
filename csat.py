@@ -163,8 +163,15 @@ def main():
     rD2 = requests.get(url)
     dataD = rD2.content
     dbTab2 = pd.read_csv(BytesIO(dataD), index_col=0)
-    st.write(dbTab2)
-    st.write("TOTAL de respondentes = ", len(dbTab2))
+    dbTab2.columns = ['ID', 'N1', 'N2', 'N3', 'N4']
+    dbTab2['ID'].fillna('', inplace=True)
+    dbTab2['N1'].fillna('', inplace=True)
+    dbTab2['N2'].fillna('', inplace=True)
+    dbTab2['N3'].fillna('', inplace=True)
+    dbTab2['N4'].fillna('', inplace=True)
+    db2 = dbTab2[['N1', 'N2', 'N3', 'N4']]  
+    st.write(db2)
+    st.write("TOTAL de respondentes = ", len(db2))
   
 if __name__ == '__main__':
 	main()
